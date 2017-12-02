@@ -27,7 +27,8 @@ RUN wget http://chromedriver.storage.googleapis.com/2.33/chromedriver_linux64.zi
     && rm chromedriver_linux64.zip
 
 COPY Gemfile ./
-RUN bundler install
+RUN ls && pwd && whoami
+RUN bundle install
 
 RUN useradd -ms /bin/bash capybara
 
